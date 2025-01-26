@@ -2,7 +2,16 @@ import { motion } from "framer-motion";
 import { Archive, BookOpen, Cloud, StickyNote } from "lucide-react";
 import Link from 'next/link';
 
-const ArcHiveDescription = ({ mounted, fadeIn }) => {
+// Define types for the props
+interface ArcHiveDescriptionProps {
+  mounted: boolean;
+  fadeIn: {
+    hidden: string;
+    visible: string;
+  };
+}
+
+const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
   return (
     <section className="flex flex-col items-center space-y-12 py-12">
       <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-12 gap-12">
