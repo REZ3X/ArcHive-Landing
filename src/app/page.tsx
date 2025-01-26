@@ -35,7 +35,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             animate={mounted ? "visible" : "hidden"}
-            variants={fadeIn} // Passing fadeIn object for animation
+            variants={fadeIn}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <ArcHiveDescription mounted={mounted} fadeIn={fadeIn} />
@@ -46,7 +46,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             animate={mounted ? "visible" : "hidden"}
-            variants={fadeIn} // Passing fadeIn object for animation
+            variants={fadeIn}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <FeaturesSection mounted={mounted} fadeIn={fadeIn} />
