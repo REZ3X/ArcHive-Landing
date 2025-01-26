@@ -8,7 +8,7 @@ import FeaturesSection from "../components/home/FeaturesSection";
 import JoinWaitlist from "../components/home/JoinWaitlist";
 import DeviceLinkButton from "../components/home/DeviceLinkButton";
 import PlannedFeature from "../components/home/PlannedFeature";
-import ArcHiveDescription from "../components/home/ArcHiveDescription";
+import ArcHiveDescription from "../components/home/ArchiveDescription";
 import Footer from "../components/home/Footer";
 import NavBar from "../components/navigation/DeskNavBar"; // Import NavBar
 
