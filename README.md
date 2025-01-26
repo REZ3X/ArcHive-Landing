@@ -1,8 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ArcHive Landing Page
+
+Welcome to the ArcHive Landing Page repository. This project is built using [Next.js](https://nextjs.org) and showcases the features and planned functionalities of the ArcHive platform.
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,9 +30,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The main components of the landing page are organized as follows:
+
+- `components/home/AnimatedBackground.tsx`: Handles the animated background.
+- `components/home/Header.tsx`: Contains the header section.
+- `components/home/FeaturesSection.tsx`: Displays the features of ArcHive.
+- `components/home/JoinWaitlist.tsx`: Section for users to join the waitlist.
+- `components/home/DeviceLinkButton.tsx`: Buttons linking to different device platforms.
+- `components/home/PlannedFeature.tsx`: Shows planned features.
+- `components/home/ArcHiveDescription.tsx`: Describes ArcHive.
+- `components/home/Footer.tsx`: Contains the footer section.
 
 ## Learn More
 
@@ -33,4 +56,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
