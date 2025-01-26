@@ -2,7 +2,16 @@ import { Globe, Monitor, Smartphone } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-const DeviceLinkButton = ({ mounted, fadeIn }) => {
+// Define types for the props
+interface DeviceLinkButtonProps {
+  mounted: boolean;
+  fadeIn: {
+    hidden: string;
+    visible: string;
+  };
+}
+
+const DeviceLinkButton: React.FC<DeviceLinkButtonProps> = ({ mounted, fadeIn }) => {
   return (
     <section className="text-center space-y-6">
       <motion.h2
