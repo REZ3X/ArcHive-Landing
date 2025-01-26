@@ -20,8 +20,8 @@ export default function Home() {
   }, []);
 
   const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 20 },  // initial hidden state
+    visible: { opacity: 1, y: 0 },   // final visible state
   };
 
   return (
@@ -32,11 +32,25 @@ export default function Home() {
       <main className="container mx-auto px-4 py-12 space-y-24 relative z-10 flex flex-col items-center">
         <div id="about"></div>
         <section>
-          <ArcHiveDescription mounted={mounted} fadeIn={fadeIn} />
+          <motion.div
+            initial="hidden"
+            animate={mounted ? "visible" : "hidden"}
+            variants={fadeIn} // Passing fadeIn object for animation
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <ArcHiveDescription mounted={mounted} fadeIn={fadeIn} />
+          </motion.div>
         </section>
         <div id="features"></div>
         <section>
-          <FeaturesSection mounted={mounted} fadeIn={fadeIn} />
+          <motion.div
+            initial="hidden"
+            animate={mounted ? "visible" : "hidden"}
+            variants={fadeIn} // Passing fadeIn object for animation
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <FeaturesSection mounted={mounted} fadeIn={fadeIn} />
+          </motion.div>
         </section>
         <div id="future"></div>
         <section>
