@@ -43,6 +43,10 @@ The main components of the landing page are organized as follows:
 - `components/home/ArcHiveDescription.tsx`: Describes ArcHive.
 - `components/home/Footer.tsx`: Contains the footer section.
 
+## Disclaimer
+
+Please note that the responsive design is still a work in progress and may not function correctly on all devices.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

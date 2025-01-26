@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,28 +10,28 @@ const Footer = () => {
             <p className="text-gray-400">Your dynamic hub for ideas and stories.</p>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Business Contact</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li className="text-gray-400 hover:text-white transition-colors">
+                <a href="tel:+6282141884664">Phone: +62 821 4188 4664</a>
+              </li>
+              <li className="text-gray-400 hover:text-white transition-colors">
+                <a href="mailto:abim@rejaka.me">Email: abim@rejaka.me</a>
+              </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
+              <li><a href="/comingSoon" className="text-gray-400 hover:text-white transition-colors">The Team</a></li>
+              <li><a href="/comingSoon" className="text-gray-400 hover:text-white transition-colors">Roadmap</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Facebook /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin /></a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Instagram /></a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Github /></a>
             </div>
           </div>
         </div>

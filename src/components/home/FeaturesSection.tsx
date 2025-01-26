@@ -14,7 +14,7 @@ const FeaturesSection = ({ mounted, fadeIn }) => {
   ];
 
   return (
-    <section className="space-y-12 flex items-center flex-col">
+    <section className="space-y-12 flex items-center flex-col py-12">
       <motion.h2
         className="text-3xl font-semibold text-center"
         initial="hidden"
@@ -24,25 +24,47 @@ const FeaturesSection = ({ mounted, fadeIn }) => {
       >
         Features
       </motion.h2>
-      <div className="grid md:grid-cols-2 gap-8">
-        {features.map((feature, index) => (
-          <motion.div
-            key={feature.title}
-            className="flex items-start space-x-4"
-            initial="hidden"
-            animate={mounted ? "visible" : "hidden"}
-            variants={fadeIn}
-            transition={{ duration: 0.5, delay: 0.2 * (index + 8) }}
-          >
-            <div className="bg-yellow-400 p-2 rounded-full text-gray-900">
-              {feature.icon}
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          </motion.div>
-        ))}
+      <div className="flex flex-col md:flex-row justify-center gap-4">
+        <div className="flex flex-col space-y-4 w-full md:w-1/2">
+          {features.slice(0, 3).map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              className="flex items-start space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28" // Card styling with fixed height
+              initial="hidden"
+              animate={mounted ? "visible" : "hidden"}
+              variants={fadeIn}
+              transition={{ duration: 0.5, delay: 0.2 * (index + 8) }}
+            >
+              <div className="bg-yellow-400 p-2 rounded-full text-gray-900">
+                {feature.icon}
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        <div className="flex flex-col space-y-4 w-full md:w-1/2">
+          {features.slice(3).map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              className="flex items-start space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28" // Card styling with fixed height
+              initial="hidden"
+              animate={mounted ? "visible" : "hidden"}
+              variants={fadeIn}
+              transition={{ duration: 0.5, delay: 0.2 * (index + 11) }}
+            >
+              <div className="bg-yellow-400 p-2 rounded-full text-gray-900">
+                {feature.icon}
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
