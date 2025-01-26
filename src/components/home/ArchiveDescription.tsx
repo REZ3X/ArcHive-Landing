@@ -1,14 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants
 import { Archive, BookOpen, Cloud, StickyNote } from "lucide-react";
 import Link from 'next/link';
 
 // Define types for the props
 interface ArcHiveDescriptionProps {
   mounted: boolean;
-  fadeIn: {
-    hidden: string;
-    visible: string;
-  };
+  fadeIn: Variants; // Change this to Variants
 }
 
 const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
@@ -22,7 +19,7 @@ const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
           variants={fadeIn}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h1 className="text-9xl font-bold text-yellow-400">ArcHive</h1>
+          <h1 className="text-9xl font-bold text-yellow-400 mt-[-80px]">ArcHive</h1>
         </motion.div>
         <motion.div 
           className="flex flex-col space-y-6 text-center md:text-left"
@@ -75,7 +72,7 @@ const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
       >
         <Link href="/comingSoon" legacyBehavior>
           <a className="justify-center inline-flex items-center px-6 py-3 bg-gray-800 text-lg font-medium text-white rounded-full hover:bg-gray-700 transition-colors duration-300">
-           The Team
+            The Team
           </a>
         </Link>
         <Link href="/comingSoon" legacyBehavior>
