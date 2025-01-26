@@ -64,17 +64,7 @@ const ArcHiveDescription = ({ mounted, fadeIn }) => {
         variants={fadeIn}
         transition={{ duration: 0.5, delay: 0.8 }}
       >
-        <Link href="/comingSoon" legacyBehavior>
-          <a className="justify-center inline-flex items-center px-6 py-3 bg-gray-800 text-lg font-medium text-white rounded-full hover:bg-gray-700 transition-colors duration-300">
-           The Team
-          </a>
-        </Link>
-        <Link href="/comingSoon" legacyBehavior>
-          <a className="justify-center inline-flex items-center px-6 py-3 bg-gray-800 text-lg font-medium text-white rounded-full hover:bg-gray-700 transition-colors duration-300">
-            Roadmap
-          </a>
-        </Link>
-        <Link href="/comingSoon" legacyBehavior>
+        <Link href="/infrastructure" legacyBehavior>
           <a className="justify-center inline-flex items-center px-6 py-3 bg-gray-800 text-lg font-medium text-white rounded-full hover:bg-gray-700 transition-colors duration-300">
             Infrastructure
           </a>

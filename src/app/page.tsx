@@ -32,7 +32,7 @@ export default function Home() {
       <main className="container mx-auto px-4 py-12 space-y-24 relative z-10 flex flex-col items-center">
         <div id="about"></div>
         <section>
-          <ArcHiveDescription />
+          <ArcHiveDescription mounted={mounted} fadeIn={fadeIn} />
         </section>
         <div id="features"></div>
         <section>
