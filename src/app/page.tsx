@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import AnimatedBackground from "../components/home/AnimatedBackground";
 import Header from "../components/home/Header";
 import FeaturesSection from "../components/home/FeaturesSection";
@@ -19,7 +19,8 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  const fadeIn = {
+  // Define the fadeIn variants with the correct type
+  const fadeIn: Variants = {
     hidden: { opacity: 0, y: 20 },  // initial hidden state
     visible: { opacity: 1, y: 0 },   // final visible state
   };
