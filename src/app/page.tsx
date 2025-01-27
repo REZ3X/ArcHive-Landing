@@ -31,7 +31,7 @@ export default function Home() {
       <NavBar /> {/* Add NavBar */}
       <Header mounted={mounted} fadeIn={fadeIn} />
       <main className="container mx-auto px-4 py-12 space-y-24 relative z-10 flex flex-col items-center">
-        <div id="about" className="mt-[-100px]"></div>
+        <div id="about"></div>
         <section>
           <motion.div
             initial="hidden"

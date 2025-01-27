@@ -20,7 +20,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ mounted, fadeIn }) =>
   ];
 
   return (
-    <section className="space-y-12 flex items-center flex-col py-12">
+    <section className="space-y-12 flex items-center flex-col py-4">
       <motion.h2
         className="text-3xl font-semibold text-center"
         initial="hidden"

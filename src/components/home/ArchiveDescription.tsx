@@ -10,7 +10,7 @@ interface ArcHiveDescriptionProps {
 
 const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
   return (
-    <section className="flex flex-col items-center space-y-12 py-12">
+    <section className="flex flex-col items-center space-y-12 py-8">
       <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-12 gap-8">
         <motion.div 
           className="flex-shrink-0 text-center md:text-left"
@@ -19,7 +19,7 @@ const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
           variants={fadeIn}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h1 className="text-9xl font-bold text-yellow-400 mt-[-80px]">ArcHive</h1>
+          <h1 className="text-8xl font-bold text-yellow-400 mt-[-80px]">ArcHive</h1>
         </motion.div>
         <motion.div 
           className="flex flex-col space-y-6 text-center md:text-left"
