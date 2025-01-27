@@ -11,6 +11,7 @@ import PlannedFeature from "../components/home/PlannedFeature";
 import ArcHiveDescription from "../components/home/ArchiveDescription";
 import Footer from "../components/home/Footer";
 import NavBar from "../components/navigation/DeskNavBar"; // Import NavBar
+import MobileNavBar from "../components/navigation/MobileNavBar"; // Import MobileNavBar
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -29,8 +30,9 @@ export default function Home() {
     <div className="min-h-screen text-white font-nunito" style={{ backgroundColor: "#111827" }}>
       <AnimatedBackground />
       <NavBar /> {/* Add NavBar */}
+      <MobileNavBar />
       <Header mounted={mounted} fadeIn={fadeIn} />
-      <main className="container mx-auto px-4 py-12 space-y-24 relative z-10 flex flex-col items-center">
+      <main className="container mx-auto px-4 py-12 space-y-24 max-425:space-y-8 relative z-10 flex flex-col items-center">
         <div id="about"></div>
         <section>
           <motion.div

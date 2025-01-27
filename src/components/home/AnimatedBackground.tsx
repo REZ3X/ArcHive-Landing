@@ -32,7 +32,7 @@ const AnimatedBackground = () => {
   return (
     <div className="fixed inset-0 z-0">
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800"
+        className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 max-425:w-[425px]"
         animate={{
           background: [
             "linear-gradient(to bottom right, #111827, #374151)",

@@ -14,8 +14,9 @@ export default {
       },
       screens: {
         'max-320': {'max': '320px'},
-        'max-375': {'max': '375px'},
-        'max-425': {'max': '425px'},
+        'max-375': {'max': '376px'},
+        'max-425': {'max': '426px'},
+        'desktop': {'min': '1024px'},
       },
     },
   },

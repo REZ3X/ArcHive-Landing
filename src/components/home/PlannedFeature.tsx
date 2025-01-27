@@ -25,7 +25,7 @@ const PlannedFeature = () => {
           {features.slice(0, 2).map((feature, index) => (
             <motion.div 
               key={feature.title}
-              className="flex items-center space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28" // Card styling with fixed height
+              className="flex items-center space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28 max-375:h-24" // Card styling with fixed height
               initial="hidden"
               animate="visible"
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
@@ -35,8 +35,8 @@ const PlannedFeature = () => {
                 {feature.icon}
               </div>
               <div>
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold max-375:text-md">{feature.title}</h3>
+                <p className="text-gray-300 max-375:text-sm">{feature.description}</p>
               </div>
             </motion.div>
           ))}
@@ -45,7 +45,7 @@ const PlannedFeature = () => {
           {features.slice(2).map((feature, index) => (
             <motion.div 
               key={feature.title}
-              className="flex items-center space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28" // Card styling with fixed height
+              className="flex items-center space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28 max-375:h-24" // Card styling with fixed height
               initial="hidden"
               animate="visible"
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
@@ -55,8 +55,8 @@ const PlannedFeature = () => {
                 {feature.icon}
               </div>
               <div>
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold max-375:text-md">{feature.title}</h3>
+                <p className="text-gray-300 max-375:text-sm">{feature.description}</p>
               </div>
             </motion.div>
           ))}

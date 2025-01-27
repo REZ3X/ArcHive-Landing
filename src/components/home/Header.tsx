@@ -20,23 +20,24 @@ const Header: React.FC<HeaderProps> = ({ mounted, fadeIn }) => {
     hidden: { opacity: 0, y: -10 },
     visible: {
       opacity: 1,
-      y: [0, 10, 0],
+      y: [0, 10, 0], // Move down and back up
       transition: {
         duration: 1,
         repeat: Infinity,
-        repeatType: "loop" as const, // Ensure repeatType is a literal type
+        repeatType: "loop", // Loop the animation
+        ease: "easeInOut", // Smooth easing
       },
     },
   };
 
   return (
     <div
-      className="relative h-screen flex flex-col items-center justify-center bg-cover bg-center"
+      className="relative h-screen max-425:max-w-[425px] flex flex-col items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: "url('/placeholder.svg?height=1080&width=1920')" }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <motion.h1
-        className="text-6xl font-bold text-center text-white relative z-10"
+        className="text-6xl max-425:text-3xl font-bold text-center text-white relative z-10"
         initial="hidden"
         animate={mounted ? "visible" : "hidden"}
         variants={titleVariants}
@@ -44,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ mounted, fadeIn }) => {
       >
         Welcome to <span className="text-yellow-400">ArcHive Notes</span>
       </motion.h1>
-      <div className={`relative z-10 text-4xl text-yellow-400 mt-4 ${styles.comingSoon}`}>
+      <div className={`relative z-10 text-4xl max-425:text-2xl text-yellow-400 mt-4 ${styles.comingSoon}`}>
         Coming Soon
       </div>
       <motion.div
@@ -53,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ mounted, fadeIn }) => {
         animate={mounted ? "visible" : "hidden"}
         variants={arrowVariants}
       >
-        <a href="#about" className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-300">
+        <a href="#about" className="flex items-center justify-center w-12 h-12 max-425:w-8 max-425:h-8 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-300">
           <ChevronDown className="w-8 h-8 text-white" />
         </a>
       </motion.div>
