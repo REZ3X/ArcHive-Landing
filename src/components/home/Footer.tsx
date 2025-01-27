@@ -48,13 +48,13 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Connect</h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/rejakasusanto?igsh=dnZlZ25uZ2xuNzU1"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <Instagram />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/REZ3X"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <Github />
