@@ -11,7 +11,7 @@ interface ArcHiveDescriptionProps {
 const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
   return (
     <section className="flex flex-col items-center space-y-12 py-12">
-      <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-12 gap-12">
+      <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-12 gap-8">
         <motion.div 
           className="flex-shrink-0 text-center md:text-left"
           initial="hidden"
