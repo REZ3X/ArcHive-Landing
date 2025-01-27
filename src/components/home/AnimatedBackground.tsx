@@ -35,9 +35,9 @@ const AnimatedBackground = () => {
         className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 max-425:w-[425px]"
         animate={{
           background: [
-            "linear-gradient(to bottom right, #111827, #374151)",
-            "linear-gradient(to bottom right, #374151, #6f7782)",
-            "linear-gradient(to bottom right, #6f7782, #46505b)",
+            "linear-gradient(to bottom right, #111827, #2c3e50)",
+            "linear-gradient(to bottom right, #2c3e50, #374151)",
+            "linear-gradient(to bottom right, #374151, #46505b)",
             "linear-gradient(to bottom right, #46505b, #111827)",
           ],
         }}
