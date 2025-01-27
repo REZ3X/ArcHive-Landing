@@ -1,13 +1,19 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, FormEvent } from "react"; // Import FormEvent for typing the event
+import { motion, Variants } from "framer-motion"; // Import Variants
 
-const JoinWaitlist = ({ mounted, fadeIn }) => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+// Define types for the props
+interface JoinWaitlistProps {
+  mounted: boolean; // Type for mounted
+  fadeIn: Variants; // Type for fadeIn
+}
 
-  const handleSubmit = (e) => {
+const JoinWaitlist: React.FC<JoinWaitlistProps> = ({ mounted, fadeIn }) => {
+  const [email, setEmail] = useState<string>(""); // Specify type for email state
+  const [submitted, setSubmitted] = useState<boolean>(false); // Specify type for submitted state
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => { // Type the event parameter
     e.preventDefault();
     // Add your form submission logic here
     console.log("Email submitted:", email);

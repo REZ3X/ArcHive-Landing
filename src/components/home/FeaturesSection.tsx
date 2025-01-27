@@ -1,9 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants
 import { Edit3, Cloud, Book, Layers, Lock, Star } from "lucide-react";
 
-const FeaturesSection = ({ mounted, fadeIn }) => {
+// Define types for the props
+interface FeaturesSectionProps {
+  mounted: boolean; // Type for mounted
+  fadeIn: Variants; // Type for fadeIn
+}
+
+const FeaturesSection: React.FC<FeaturesSectionProps> = ({ mounted, fadeIn }) => {
   const features = [
     { title: "Intuitive Interface", description: "Easy-to-use platform for managing your notes and ideas.", icon: <Edit3 className="w-6 h-6" /> },
     { title: "Cloud Synchronization", description: "Access your notes from anywhere, anytime.", icon: <Cloud className="w-6 h-6" /> },

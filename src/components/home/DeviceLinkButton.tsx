@@ -1,14 +1,11 @@
 import { Globe, Monitor, Smartphone } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion'; // Import Variants
 
 // Define types for the props
 interface DeviceLinkButtonProps {
   mounted: boolean;
-  fadeIn: {
-    hidden: string;
-    visible: string;
-  };
+  fadeIn: Variants; // Change this to Variants
 }
 
 const DeviceLinkButton: React.FC<DeviceLinkButtonProps> = ({ mounted, fadeIn }) => {

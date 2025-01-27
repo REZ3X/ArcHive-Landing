@@ -1,16 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants
 import styles from "../../styles/Header.module.css"; // Import the CSS module
 import { ChevronDown } from "lucide-react"; // Import a more elegant arrow icon
 
-const Header = ({ mounted, fadeIn }) => {
-  const titleVariants = {
+// Define types for the props
+interface HeaderProps {
+  mounted: boolean; // Type for mounted
+  fadeIn: Variants; // Type for fadeIn
+}
+
+const Header: React.FC<HeaderProps> = ({ mounted, fadeIn }) => {
+  const titleVariants: Variants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
   };
 
-  const arrowVariants = {
+  const arrowVariants: Variants = {
     hidden: { opacity: 0, y: -10 },
     visible: {
       opacity: 1,
@@ -18,7 +24,7 @@ const Header = ({ mounted, fadeIn }) => {
       transition: {
         duration: 1,
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: "loop" as const, // Ensure repeatType is a literal type
       },
     },
   };
