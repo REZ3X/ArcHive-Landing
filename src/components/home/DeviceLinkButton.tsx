@@ -23,7 +23,7 @@ const DeviceLinkButton: React.FC<DeviceLinkButtonProps> = ({ mounted, fadeIn }) 
       <div className="flex justify-center space-x-6 max-425:space-x-2 flex-wrap max-425:align-center max-425:items-center max-425:gap-8">
         {[{ title: "Website", icon: <Globe className="w-8 h-8" />, url: "/comingSoon" },
           { title: "Desktop App", icon: <Monitor className="w-8 h-8" />, url: "/comingSoon" },
-          { title: "PWA Web App", icon: <Smartphone className="w-8 h-8" />, url: "/comingSoon" }].map((item, index) => (
+          { title: "PWA", icon: <Smartphone className="w-8 h-8" />, url: "/comingSoon" }].map((item, index) => (
           <motion.div 
             key={item.title}
             initial="hidden"

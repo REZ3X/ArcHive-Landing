@@ -1,48 +1,42 @@
-"use client";
+import { useState, ChangeEvent, FormEvent } from 'react';
+import { motion, Variants } from 'framer-motion';
 
-import { useState, FormEvent } from "react"; // Import FormEvent for typing the event
-import { motion, Variants } from "framer-motion"; // Import Variants
-
-// Define types for the props
 interface JoinWaitlistProps {
-  mounted: boolean; // Type for mounted
-  fadeIn: Variants; // Type for fadeIn
+  mounted: boolean;
+  fadeIn: Variants;
 }
 
-const JoinWaitlist: React.FC<JoinWaitlistProps> = ({ mounted, fadeIn }) => {
-  const [email, setEmail] = useState<string>(""); // Specify type for email state
-  const [submitted, setSubmitted] = useState<boolean>(false); // Specify type for submitted state
+const JoinWaitlist = ({ mounted, fadeIn }: JoinWaitlistProps) => {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => { // Type the event parameter
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log("Email submitted:", email);
-    setSubmitted(true);
+
+    try {
+      const response = await fetch('/api/joinWaitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        console.error('Failed to join waitlist');
+      }
+    } catch (error) {
+      console.error('Failed to join waitlist', error);
+    }
   };
 
   return (
-    <section className="text-center space-y-6">
-      <motion.h2
-        className="text-3xl font-semibold"
-        initial="hidden"
-        animate={mounted ? "visible" : "hidden"}
-        variants={fadeIn}
-        transition={{ duration: 0.5, delay: 2 }}
-      >
-        Join the Waitlist
-      </motion.h2>
-      <motion.p
-        className="max-w-2xl mx-auto text-gray-300"
-        initial="hidden"
-        animate={mounted ? "visible" : "hidden"}
-        variants={fadeIn}
-        transition={{ duration: 0.5, delay: 2.2 }}
-      >
-        Be the first to experience ArcHive when we launch. Sign up for our waitlist and stay updated on our progress.
-      </motion.p>
+    <section className="py-12">
       {!submitted ? (
         <motion.form
-          className="max-w-md mx-auto space-y-4"
+          className="max-w-md mx-auto"
           initial="hidden"
           animate={mounted ? "visible" : "hidden"}
           variants={fadeIn}
@@ -54,19 +48,19 @@ const JoinWaitlist: React.FC<JoinWaitlistProps> = ({ mounted, fadeIn }) => {
             className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
             placeholder="Enter your email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
           <button
             type="submit"
-            className="w-full px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-500 transition-colors duration-300"
+            className="w-full mt-4 px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-500 transition-colors duration-300"
           >
             Join Waitlist
           </button>
         </motion.form>
       ) : (
         <motion.p
-          className="max-w-md mx-auto text-green-400"
+          className="max-w-md mx-auto text-white"
           initial="hidden"
           animate={mounted ? "visible" : "hidden"}
           variants={fadeIn}

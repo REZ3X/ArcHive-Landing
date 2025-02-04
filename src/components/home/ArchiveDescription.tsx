@@ -70,7 +70,7 @@ const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
         variants={fadeIn}
         transition={{ duration: 0.5, delay: 0.8 }}
       >
-        <Link href="/comingSoon" legacyBehavior>
+        <Link href="/team" legacyBehavior>
           <a className="justify-center inline-flex items-center px-6 py-3 bg-gray-800 text-lg font-medium text-white rounded-full hover:bg-gray-700 transition-colors duration-300">
             The Team
           </a>
@@ -80,7 +80,7 @@ const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
             Roadmap
           </a>
         </Link>
-        <Link href="/comingSoon" legacyBehavior>
+        <Link href="/Infrastructure" legacyBehavior>
           <a className="justify-center inline-flex items-center px-6 py-3 bg-gray-800 text-lg font-medium text-white rounded-full hover:bg-gray-700 transition-colors duration-300">
             Infrastructure
           </a>
