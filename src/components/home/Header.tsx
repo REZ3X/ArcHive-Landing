@@ -20,12 +20,12 @@ const Header: React.FC<HeaderProps> = ({ mounted, fadeIn }) => {
     hidden: { opacity: 0, y: -10 },
     visible: {
       opacity: 1,
-      y: [0, 10, 0], // Move down and back up
+      y: [0, 10, 0],
       transition: {
         duration: 1,
         repeat: Infinity,
-        repeatType: "loop", // Loop the animation
-        ease: "easeInOut", // Smooth easing
+        repeatType: "loop", 
+        ease: "easeInOut", 
       },
     },
   };
@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ mounted, fadeIn }) => {
         Welcome to <span className="text-yellow-400">ArcHive Notes</span>
       </motion.h1>
       <div className={`relative z-10 text-4xl max-425:text-2xl text-yellow-400 mt-4 ${styles.comingSoon}`}>
-        Coming Soon
+        v0.6 Beta is Here
       </div>
       <motion.div
         className="absolute bottom-10 text-white text-4xl"

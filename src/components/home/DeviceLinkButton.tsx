@@ -1,11 +1,10 @@
 import { Globe, Monitor, Smartphone } from 'lucide-react';
 import Link from 'next/link';
-import { motion, Variants } from 'framer-motion'; // Import Variants
+import { motion, Variants } from 'framer-motion';
 
-// Define types for the props
 interface DeviceLinkButtonProps {
   mounted: boolean;
-  fadeIn: Variants; // Change this to Variants
+  fadeIn: Variants;
 }
 
 const DeviceLinkButton: React.FC<DeviceLinkButtonProps> = ({ mounted, fadeIn }) => {
@@ -21,7 +20,7 @@ const DeviceLinkButton: React.FC<DeviceLinkButtonProps> = ({ mounted, fadeIn }) 
         Write Your Creativity Anywhere
       </motion.h2>
       <div className="flex justify-center space-x-6 max-425:space-x-2 flex-wrap max-425:align-center max-425:items-center max-425:gap-8">
-        {[{ title: "Website", icon: <Globe className="w-8 h-8" />, url: "https://alpha-dev.archivenotes.site", state: "Alpha" },
+        {[{ title: "Website", icon: <Globe className="w-8 h-8" />, url: "https://alpha-dev.archivenotes.site", state: "Beta" },
           { title: "Desktop App", icon: <Monitor className="w-8 h-8" />, url: "/comingSoon", state: "Coming Soon" },
           { title: "PWA", icon: <Smartphone className="w-8 h-8" />, url: "/comingSoon", state: "Coming Soon" }].map((item, index) => (
           <motion.div 

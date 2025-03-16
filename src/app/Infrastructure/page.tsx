@@ -1,32 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript, SiNestjs, SiMysql } from "react-icons/si";
+import { SiTailwindcss, SiTypescript, SiMongodb, SiNextdotjs, SiJavascript } from "react-icons/si";
 
 const Infrastructure = () => {
   const infrastructureDetails = [
     {
       title: "Frontend",
       technologies: [
-        { name: "Next.js", icon: <FaReact className="text-blue-500" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
         { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-500" /> },
         { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
-        { name: "JavaScript", icon: <FaReact className="text-yellow-500" /> },
+        { name: "JavaScript", icon: <SiJavascript  className="text-yellow-500" /> },
       ],
     },
     {
       title: "Backend",
       technologies: [
-        { name: "NestJS", icon: <SiNestjs className="text-red-500" /> },
+        { name: "Next.js API Route", icon: <SiNextdotjs className="text-white" /> },
         { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
       ],
     },
     {
       title: "Database",
       technologies: [
-        { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
-        { name: "Aiven", icon: <FaDatabase className="text-red-500" /> }, // Using a generic database icon for Aiven
+        { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+        { name: "Atlas", icon: <SiMongodb className="text-green-500" /> },
       ],
     },
   ];

@@ -75,9 +75,9 @@ const ArcHiveDescription = ({ mounted, fadeIn }: ArcHiveDescriptionProps) => {
             The Team
           </a>
         </Link>
-        <Link href="/comingSoon" legacyBehavior>
+        <Link href="/patch" legacyBehavior>
           <a className="justify-center inline-flex items-center px-6 py-3 bg-gray-800 text-lg font-medium text-white rounded-full hover:bg-gray-700 transition-colors duration-300">
-            Roadmap
+            Patch Note
           </a>
         </Link>
         <Link href="/Infrastructure" legacyBehavior>
