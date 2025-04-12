@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-// Define the Circle type
 type Circle = {
   width: number;
   height: number;
@@ -14,7 +13,6 @@ type Circle = {
 };
 
 const AnimatedBackground = () => {
-  // Type the circles state with the Circle type
   const [circles, setCircles] = useState<Circle[]>([]);
 
   useEffect(() => {

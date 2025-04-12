@@ -67,7 +67,6 @@ export default function PatchNotesPage() {
     }
   };
 
-  // Helper function to render content items (text or links)
   const renderContentItem = (item: ContentItem, index: number) => {
     if (typeof item === "string") {
       return (

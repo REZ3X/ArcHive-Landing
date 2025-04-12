@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, Variants } from "framer-motion"; // Import Variants type
+import { motion, Variants } from "framer-motion";
 import AnimatedBackground from "../components/home/AnimatedBackground";
 import Header from "../components/home/Header";
 import FeaturesSection from "../components/home/FeaturesSection";
@@ -10,8 +10,8 @@ import DeviceLinkButton from "../components/home/DeviceLinkButton";
 import PlannedFeature from "../components/home/PlannedFeature";
 import ArcHiveDescription from "../components/home/ArchiveDescription";
 import Footer from "../components/home/Footer";
-import NavBar from "../components/navigation/DeskNavBar"; // Import NavBar
-import MobileNavBar from "../components/navigation/MobileNavBar"; // Import MobileNavBar
+import NavBar from "../components/navigation/DeskNavBar";
+import MobileNavBar from "../components/navigation/MobileNavBar";
 import PageWrapper from "@/components/PageWrapper";
 
 export default function Home() {
@@ -21,10 +21,9 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  // Define the fadeIn variants with the correct type
   const fadeIn: Variants = {
-    hidden: { opacity: 0, y: 20 }, // initial hidden state
-    visible: { opacity: 1, y: 0 }, // final visible state
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -34,8 +33,7 @@ export default function Home() {
         style={{ backgroundColor: "#111827" }}
       >
         <AnimatedBackground />
-        <NavBar /> {/* Add NavBar */}
-        <MobileNavBar />
+        <NavBar /> <MobileNavBar />
         <Header mounted={mounted} fadeIn={fadeIn} />
         <main className="container mx-auto px-4 py-12 space-y-24 max-425:space-y-8 relative z-10 flex flex-col items-center">
           <div id="about"></div>

@@ -1,22 +1,48 @@
 "use client";
 
-import { motion, Variants } from "framer-motion"; // Import Variants
+import { motion, Variants } from "framer-motion";
 import { Edit3, Cloud, Book, Layers, Lock, Star } from "lucide-react";
 
-// Define types for the props
 interface FeaturesSectionProps {
-  mounted: boolean; // Type for mounted
-  fadeIn: Variants; // Type for fadeIn
+  mounted: boolean;
+  fadeIn: Variants;
 }
 
-const FeaturesSection: React.FC<FeaturesSectionProps> = ({ mounted, fadeIn }) => {
+const FeaturesSection: React.FC<FeaturesSectionProps> = ({
+  mounted,
+  fadeIn,
+}) => {
   const features = [
-    { title: "Intuitive Interface", description: "Easy-to-use platform for managing your notes and ideas.", icon: <Edit3 className="w-6 h-6" /> },
-    { title: "Cloud Synchronization", description: "Access your notes from anywhere, anytime.", icon: <Cloud className="w-6 h-6" /> },
-    { title: "Creative Writing Support", description: "Perfect for writing novels and stories.", icon: <Book className="w-6 h-6" /> },
-    { title: "Flexible Organization", description: "Customize how you store and categorize your information.", icon: <Layers className="w-6 h-6" /> },
-    { title: "Secure Authentication", description: "Keep your ideas safe with robust security measures.", icon: <Lock className="w-6 h-6" /> },
-    { title: "Premium Account", description: "Unlock exclusive features for power users.", icon: <Star className="w-6 h-6" /> },
+    {
+      title: "Intuitive Interface",
+      description: "Easy-to-use platform for managing your notes and ideas.",
+      icon: <Edit3 className="w-6 h-6" />,
+    },
+    {
+      title: "Cloud Synchronization",
+      description: "Access your notes from anywhere, anytime.",
+      icon: <Cloud className="w-6 h-6" />,
+    },
+    {
+      title: "Creative Writing Support",
+      description: "Perfect for writing novels and stories.",
+      icon: <Book className="w-6 h-6" />,
+    },
+    {
+      title: "Flexible Organization",
+      description: "Customize how you store and categorize your information.",
+      icon: <Layers className="w-6 h-6" />,
+    },
+    {
+      title: "Secure Authentication",
+      description: "Keep your ideas safe with robust security measures.",
+      icon: <Lock className="w-6 h-6" />,
+    },
+    {
+      title: "Premium Account",
+      description: "Unlock exclusive features for power users.",
+      icon: <Star className="w-6 h-6" />,
+    },
   ];
 
   return (
@@ -35,7 +61,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ mounted, fadeIn }) =>
           {features.slice(0, 3).map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="flex items-start space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28 max-375:h-24" // Card styling with fixed height
+              className="flex items-start space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28 max-375:h-24"
               initial="hidden"
               animate={mounted ? "visible" : "hidden"}
               variants={fadeIn}
@@ -45,8 +71,12 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ mounted, fadeIn }) =>
                 {feature.icon}
               </div>
               <div>
-                <h3 className="text-xl  max-375:text-md font-semibold">{feature.title}</h3>
-                <p className="text-gray-300 max-375:text-sm">{feature.description}</p>
+                <h3 className="text-xl  max-375:text-md font-semibold">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 max-375:text-sm">
+                  {feature.description}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -55,7 +85,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ mounted, fadeIn }) =>
           {features.slice(3).map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="flex items-start space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28 max-375:h-24" // Card styling with fixed height
+              className="flex items-start space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg w-full h-28 max-375:h-24"
               initial="hidden"
               animate={mounted ? "visible" : "hidden"}
               variants={fadeIn}
@@ -65,8 +95,12 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ mounted, fadeIn }) =>
                 {feature.icon}
               </div>
               <div>
-                <h3 className="text-xl max-375:text-md font-semibold">{feature.title}</h3>
-                <p className="text-gray-300 max-375:text-sm">{feature.description}</p>
+                <h3 className="text-xl max-375:text-md font-semibold">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 max-375:text-sm">
+                  {feature.description}
+                </p>
               </div>
             </motion.div>
           ))}
